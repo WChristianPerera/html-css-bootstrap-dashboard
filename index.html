@@ -14,260 +14,527 @@
 </head>
 <body>
 
+
+  <header>
     <nav class="navbar bg-body-tertiary">
-        <div class="container">
-             <a class="navbar-brand" href="#">
-             <img src="img/logo.svg" alt="Bootstrap">
-            </a>
-            <form>
-              <div class="input-group">
-                  <span class="input-group-text" id="basic-addon1">@</span>
-                  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+      <div class="container-fluid justify-content-between">
+        <a class="navbar-logo">
+          <img class=" d-lg-none small_logo" src="img/mobile-logo.png" alt="">
+          <img class="d-none d-lg-block" src="img/logo.svg" alt="">
+        </a>
+        <form class="d-flex w-75" role="search">
+          <input class="form-control me-2" type="search" placeholder="&#128269; Search" aria-label="Search">
+        </form>
+
+        <a class="text-decoration-none text-secondary" href="#">
+          <i class="d-none d-md-block fa-solid fa-list-ul"></i>
+        </a>
+
+        <a class="text-decoration-none text-secondary" href="#">
+          <i class="d-none d-md-block fa-solid fa-circle-question"></i>
+        </a>
+
+        <a class="text-decoration-none text-secondary" href="#">
+          <i class="d-none d-md-block fa-solid fa-ellipsis-vertical"></i>
+        </a>
+
+        <div class="dropdown">
+              <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i style="color: #ff8f00;" class="fa-solid fa-bell"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profilo</a></li>
+                <li><a class="dropdown-item" href="#">Fatturazione</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+
+
+
+
+
+  <main>
+    <div class="row _main">
+
+
+      <!-- Side bar -->
+      <div class="col-auto Side-bar">
+
+
+        <div class="contents d-flex flex-column justify-content-between h-100 py-2">
+
+          <ul class="item_menu">
+
+            <li class="mb-2 mb-lg-0">
+              <i class="fa-solid fa-house d-lg-none"></i>
+              <a class="text-decoration-none d-none d-lg-block text-light" href="#">
+                <i class="fa-solid fa-house"></i>Home
+              </a>
+            </li>
+                  
+              
+            <li class="mb-2 mb-lg-0">
+              <i class="fa-solid fa-chart-simple d-lg-none"></i>
+              <a class="text-decoration-none d-none d-lg-block text-light" href="#">
+                <i class="fa-solid fa-chart-simple"></i> Stats
+              </a>
+            </li>    
+                
+
+            
+            <li>
+              <i class="fa-solid fa-signal d-lg-none"></i>
+              <a class="text-decoration-none d-none d-lg-block text-light" href="#">
+                <i class="fa-solid fa-signal"></i>Signals
+              </a>
+            </li>
+                  
+
+          </ul>
+
+          <ul>
+            <li>
+              <i class="fa-solid fa-gear d-lg-none"></i>
+              <a class="text-decoration-none d-none d-lg-block text-light" href="#">
+                <i class="fa-solid fa-gear"></i>Admin
+              </a>
+            </li>
+          </ul>
+          
+
+        </div>
+
+        
+      </div>
+      
+
+
+
+           
+                  
+      <!-- Main bar -->
+      <div class="col Main-contents ">
+
+        <div class="main-bar bg-primary text-light mb-3 py-3 ">
+          <div class="container-fluid ">
+            <div class="row">
+              
+              <!-- New Students  -->
+              <div class="col-12 col-md-4 col-lg-2 order-md-3 mb-3 mb-md-0">
+                <div>
+                  <span>Nuovo Studente</span>
+                  <button class="btn btn-primary border" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+
+
+
+
+                  <!-- Offcanvas  -->
+                  <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+                        Inserisci un nuovo studente
+                      </h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <div class="input-group mb-3">
+                        <span class="input-group-text">Nome e Cognome</span>
+                        <input type="text" aria-label="First name" class="form-control">
+                        <input type="text" aria-label="Last name" class="form-control">
+                      </div>
+
+                      <div class="input-group mb-3">
+                        <span class="input-group-text">@</span>
+                        <input type="email" class="form-control" placeholder="Email" aria-label="Email">
+                        <input type="text" class="form-control" placeholder="Password" aria-label="Password">
+                      </div>
+
+                      <div class="input-group mb-3">
+                        <span class="input-group-text">Indirizzo</span>
+                        <input type="text" aria-label="First name" class="form-control">
+                      </div>
+
+                      <div class="input-group mb-3">
+                        <span class="input-group-text">Città</span>
+                        <input type="text" aria-label="First name" class="form-control">
+                      </div>
+
+                      <div class="input-group mb-3">
+
+                        <button type="button" class="btn btn-outline-secondary">Stato</button>
+                        <button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span class="visually-hidden">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Italia</a></li>
+                          <li><a class="dropdown-item" href="#">Spagna</a></li>
+                          <li><a class="dropdown-item" href="#">Germania</a></li>
+                        </ul>
+                        <input type="text" class="form-control" placeholder="Scegli..." aria-label="Text input with segmented dropdown button">
+                        
+                      </div>
+
+                      <div class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">CAP</span>
+                        <input type="text" class="form-control">
+                      </div>
+
+                      <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="inputGroupFile02">
+                      </div>
+
+                      <input class="form-check-input me-1" type="checkbox" value="" id="Checkbox">
+                      <label class="form-check-label" for="Checkbox">Accetta termini e condizioni</label>
+
+                      <div class="mt-3">
+                        <button type="button" class="btn btn-primary">Salva</button>
+                        <button type="button" class="btn btn-warning">Svuota</button>
+                      </div>
+
+
+
+
+                    </div>
+                  </div>
                 </div>
-            </form>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                         Dropdown link
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </div>
+
+              <!-- Boolean mode -->
+              <div class="boolean col-12 col-md-4 col-lg-6 mb-3 mb-md-0">
+                
+
+                <div>
+                  <span>Boolean</span>
+                  <button type="button" class="btn btn-dark">Piano blaze</button>
+                </div>
+                <div>
+                  <button type="button" class="btn btn-dark">3 app</button>
+                  <i class="fa-solid fa-chevron-right"></i>
+                  <div class="dropdown d-inline-block d-lg-none">
+                    <button class="btn btn-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">Boolean mobile app</a></li>
+                      <li><a class="dropdown-item" href="#">Boolean web app</a></li>
+                      <li><a class="dropdown-item" href="#">Boolean blog app</a></li>
                     </ul>
+                  </div>
+                    
+
+                  <button type="button" class="btn btn-dark d-none d-lg-inline-block">
+                    Boolean mobile app
+                  </button>
+
+                  <button type="button" class="btn btn-dark d-none d-lg-inline-block">
+                    Boolean web app
+                  </button>
+
+                  <button type="button" class="btn btn-dark d-none d-lg-inline-block">
+                    Boolean blog app
+                  </button>
+
+
+                </div>
+
+                
+              </div>
+
+              <!-- Last online student  -->
+              <div class="col-12 col-md-4 col-lg-4">
+                  <div>Studenti online negli ultimi 30 minuti</div>
+                  <div class="fs-3">125</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row cards">
+          <div class="col-12 col-lg-8">
+            
+            <!-- Class -->
+            <div class="card mb-3">
+              <div class="card-header fw-bold">
+                Prossime Classi
+              </div>
+              <div class="card-body">
+
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th class="w-50" scope="col">Nome</th>
+                      <th scope="col" class="d-none d-md-table-cell">Data d'inizio</th>
+                      <th scope="col" class="d-none d-md-table-cell">ROI</th>
+                      <th scope="col">Stato</th>
+                      <th scope="col">Azioni</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                    
+                    <tr>
+                      <td>
+                        <img src="img/class-avatar.jpg" alt="">
+                        <span>Classe 75</span>
+                      </td>
+                      <td class="d-none d-md-table-cell">15 Febbraio 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-success rounded-5 py-1 px-2">Done</span>
+                      </td>
+                      <td>
+                        <button style="--bs-btn-padding-x: 0.68rem " type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="img/class-avatar.jpg" alt="">
+                        <span>Classe 76</span>
+                      </td>
+                      <td class="d-none d-md-table-cell">16 Febbraio 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-success rounded-5 py-1 px-2">Done</span>
+                      </td>
+                      <td>
+                        <button style="--bs-btn-padding-x: 0.68rem " type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="img/class-avatar.jpg" alt="">
+                        <span>Classe 77</span>
+                      </td>
+                      <td class="d-none d-md-table-cell">17 Febbraio 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-warning  text-light rounded-5 py-1 px-2">Process</span>
+                      </td>
+                      <td>
+                        <button style="--bs-btn-padding-x: 0.68rem " type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="img/class-avatar.jpg" alt="">
+                        <span>Classe 78</span>
+                      </td>
+                      <td class="d-none d-md-table-cell">18 Febbraio 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-success rounded-5 py-1 px-2">Done</span>
+                      </td>
+                      <td>
+                        <button style="--bs-btn-padding-x: 0.68rem " type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="img/class-avatar.jpg" alt="">
+                        <span>Classe 79</span>
+                      </td>
+                      <td class="d-none d-md-table-cell">19 Febbraio 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-danger rounded-5 py-1 px-2">Failed</span>
+                      </td>
+                      <td>
+                        <button style="--bs-btn-padding-x: 0.68rem " type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="img/class-avatar.jpg" alt="">
+                        <span>Classe 80</span>
+                      </td>
+                      <td class="d-none d-md-table-cell">20 Febbraio 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-success rounded-5 py-1 px-2">Done</span>
+                      </td>
+                      <td>
+                        <button style="--bs-btn-padding-x: 0.68rem " type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="img/class-avatar.jpg" alt="">
+                        <span>Classe 81</span>
+                      </td>
+                      <td class="d-none d-md-table-cell">21 Febbraio 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-danger rounded-5 py-1 px-2">Failed</span>
+                      </td>
+                      <td>
+                        <button style="--bs-btn-padding-x: 0.68rem " type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <img src="img/class-avatar.jpg" alt="">
+                        <span>Classe 82</span>
+                      </td>
+                      <td class="d-none d-md-table-cell">22 Febbraio 2021</td>
+                      <td class="d-none d-md-table-cell">20%</td>
+                      <td>
+                        <span class="badge text-bg-success rounded-5 py-1 px-2">Done</span>
+                      </td>
+                      <td>
+                        <button style="--bs-btn-padding-x: 0.68rem " type="button" class="btn btn-outline-dark"><i class="fa-solid fa-pen"></i></button>
+                        <button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-trash"></i></button>
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+                        
+              </div>
+
+            </div>
+
+
+            <!-- F.A.Q. -->
+            <div class="card">
+              <div class="card-header fw-bold">
+               F.A.Q.
+              </div>
+              <div class="card-body">
+                <div class="accordion" id="accordionExample">
+                  <!-- prima domanda  -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Come aggiungere un nuovo studente?
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Clicca sul + in alto nella sezione blu
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- seconda domanda  -->
+                  <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Come posso accedere alle informazioni del mio account?
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          Clicca sull'icona della campanella in alto
+                        </div>
+                      </div>
+                  </div>
+
+                  <!-- terza domanda  -->
+                  <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Posso usare questa dashboard da mobile?
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           Si, può essere utilizzata da mobile
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+            
+          </div>
+
+
+
+
+
+
+
+          
+          
+          
+          <div class="col-12 col-lg-4">
+    
+            <!-- Todo -->
+            <div class="card mb-3">
+              <div class="card-header fw-bold">
+                Todo
+              </div>
+              <div class="card-body">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                    <label class="form-check-label" for="firstCheckbox">Kickoff nuove classi</label>
+                  </li>
+
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+                    <label class="form-check-label" for="secondCheckbox">Lezione su Bootstrap 5 in classe #75</label>
+                  </li>
+
+                  <li class="list-group-item">
+                    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+                    <label class="form-check-label" for="thirdCheckbox">Controllare username github studenti</label>
                   </li>
                 </ul>
+              </div>
+
             </div>
+
+            <!-- Graphic -->
+            <div class="card">
+              <img src="img/stats.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Utenti attivi</h5>
+                <p class="card-text">
+                  Lista degli utenti attivi in piattaforma nell'ultimo mese
+                </p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Gennaio: 1200</li>
+                <li class="list-group-item">Febbraio: 800</li>
+                <li class="list-group-item">Marzo: 1500</li>
+              </ul>
+              <div class="card-body">
+                <a href="#" class="card-link">Visualizza report approfondito</a>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
           
-            
-        </div>
-    </nav>
-     
-    <main>
-        <div class="row _main">
 
 
-
-           <!-- Side-bar -->
-            <div class="col-auto vh-100 bg-body-secondary">
-                <div class="contents">
-                    <ul class="list-level1">
-                        <li class="item-menu">
-                            <a class="item-link" href="#">
-                                <img class="icon" src="" alt="">
-                                <div class="text">Home</div>
-                            </a>
-                        </li>
-                        <li class="item-menu">
-                            <a class="item-link" href="#">
-                                <img class="icon" src="" alt="">
-                                <div class="text">Stats</div>
-                
-                            </a>
-                        </li>    
-                        <li class="install item-menu spaced">
-                            <a class="item-link" href="#">
-                                <img class="icon" src="" alt="">
-                                <div class="text">Signals</div>
-                            </a>
-                        </li>
-                        <li class="user item-menu">
-                            <a class="item-link" href="#">
-                                <img class="icon" src="" alt="">
-                                <div class="text">Admin</div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-
-
-
-
-
-
-            <div class="col">
-                
-
-                <div class="row bg-primary align-items-center">
-
-
-
-
-                    <div class="col-5">
-                        <div class="row flex-wrap">
-                            <div class="col-12">
-                                <span class="fs-3">Boolean</span> 
-                                <span class="badge rounded-pill text-bg-secondary">Piano blaze</span>
-                            </div>
-                            <div class="col-12">
-                                <span class="badge rounded-pill text-bg-secondary">3 app</span>
-                                <i class="fa-solid fa-angles-right" style="color: #ffffff;"></i>
-                                <span class="badge rounded-pill text-bg-secondary">Piano blaze</span>
-                                <span class="badge rounded-pill text-bg-secondary">Piano blaze</span>
-                                <span class="badge rounded-pill text-bg-secondary">Piano blaze</span>
-                            </div>
-                        </div>
-                    </div>
-    
-                       
-                    
-
-
-                    
-                    <div class="col">
-                        <div class="row">
-                            <div class="col">Studenti online negli ultimi 30 minuti</div>
-                            <div class="col-12 fs-4">125</div>
-                        </div>
-                    </div>
-
-
-
-
-
-                    <div class="col">
-                        <span>Nuovo Studente</span>
-                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                            Button with data-bs-target
-                        </button>
-                          
-                        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                            <div class="offcanvas-header">
-                              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                            </div>
-                            <div class="offcanvas-body">
-                              <div>
-                                Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-                              </div>
-                              <div class="dropdown mt-3">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                    Dropdown button
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                              </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-
-                <div class="row">
-                    <div class="col-8">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-header">
-                              Prossime classi
-                            </div>
-                            <ul class="list-group list-group-flush">
-                              <li class="list-group-item">An item</li>
-                              <li class="list-group-item">A second item</li>
-                              <li class="list-group-item">A third item</li>
-                              <li class="list-group-item">A third item</li>
-                              <li class="list-group-item">A third item</li>
-                              <li class="list-group-item">A third item</li>
-                              <li class="list-group-item">A third item</li>
-                              <li class="list-group-item">A third item</li>
-                            </ul>
-                        </div>
-
-
-
-
-
-
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-header">
-                              F.A.Q.
-                            </div>
-                            <div class="accordion" id="accordionExample">
-                                <div class="accordion-item">
-                                  <h2 class="accordion-header">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                      Accordion Item #1
-                                    </button>
-                                  </h2>
-                                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                      <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="accordion-item">
-                                  <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                      Accordion Item #2
-                                    </button>
-                                  </h2>
-                                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                      <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="accordion-item">
-                                  <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                      Accordion Item #3
-                                    </button>
-                                  </h2>
-                                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                    <div class="accordion-body">
-                                      <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                        </div>
-
-
-
-                    </div>
-                    <div class="col-4"></div>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-            
-
-
-
-
-            
-        </div>
-    </main>
-
+    </div>
+  </main>
+              
 
     
 
@@ -280,6 +547,104 @@
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script> 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+            
+
+            
+
+
+                    
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+        
+        
+        
+        
+          
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+        
    
 
    

@@ -1,0 +1,31 @@
+/* Header */
+
+.small_logo{
+    width: 30px;
+}
+
+/* Side--bar */
+
+.Side-bar{
+    background-image: url(../img/sidebar-bg.png) ;
+    background-color: #051E34;
+    color: white;
+}
+
+li{
+    list-style: none;
+}
+
+.side-bar li{
+    color: white;
+}
+
+.sidebar i{
+    margin-left: 50px;
+}
+
+/* Card_1 */
+
+tbody img{
+    width: 25px;
+}
